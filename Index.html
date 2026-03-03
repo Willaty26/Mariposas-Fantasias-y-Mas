@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D' Mariposas - Fantasías y Más</title>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        /* Paleta de Colores y Tipografía */
+        :root {
+            --azul-mariposa: #2a5c8d;
+            --azul-claro: #eaf2f8;
+            --verde-hoja: #4CAF50;
+            --blanco: #ffffff;
+            --texto: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--blanco);
+            color: var(--texto);
+        }
+        /* Header y Navegación */
+        header {
+            background-color: var(--blanco);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--azul-mariposa);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 500;
+        }
+        /* Hero Section */
+        .hero {
+            background-color: var(--azul-claro);
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            color: var(--azul-mariposa);
+            margin-bottom: 10px;
+        }
+        .btn-principal {
+            background-color: var(--verde-hoja);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        /* Aviso de Precios */
+        .aviso {
+            background-color: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            border-bottom: 1px solid #ffeeba;
+        }
+        /* Catálogo de Productos (Grid) */
+        .catalogo {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .producto {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            background: var(--blanco);
+        }
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .producto img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        .producto h3 {
+            font-size: 16px;
+            color: var(--azul-mariposa);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        /* Nosotros */
+        .nosotros {
+            background-color: var(--azul-claro);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .nosotros p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            font-size: 18px;
+            font-style: italic;
+        }
+        /* Footer */
+        footer {
+            background-color: var(--azul-mariposa);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        #google_translate_element {
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="google_translate_element" style="text-align: right; padding: 5px; background: #f1f1f1;"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">🦋 D' Mariposas</a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#nosotros">Nuestra Historia</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="aviso">
+        <strong>Nota importante:</strong> El precio indicado en la etiqueta verde corresponde únicamente al producto exhibido, no a la planta decorativa.
+    </div>
+
+    <section id="inicio" class="hero">
+        <h1>Fantasías y Más</h1>
+        <p>Belleza, cuidado personal y accesorios seleccionados para ti.</p>
+        <a href="#catalogo" class="btn-principal">Ver Catálogo</a>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+        <h2 style="text-align:center; color: var(--azul-mariposa);">Nuestros Productos</h2>
+        <div class="grid-productos" id="galeria">
+            </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <h2 style="color: var(--azul-mariposa);">Nuestra Historia</h2>
+        <p>"D' Mariposas nació del deseo de emprender y de la profunda convicción de que, empezando con poco, se puede construir algo verdaderamente grande. Paso a paso seguimos creciendo, con la mirada puesta en llegar muy lejos para ofrecerles lo mejor. Este sueño es una realidad gracias al trabajo en equipo junto a mi esposo, mi socio principal, mi mayor apoyo y el pilar fundamental en cada decisión de nuestra tienda."</p>
+        <p><strong>- Alexa y Fran, Propietarios</strong></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 D' Mariposas - Fantasías y Más. Todos los derechos reservados.</p>
+        <p>WhatsApp: 829-265-8658 | 849-630-3733</p>
+    </footer>
+
+    <script>
+        // --- 1. CONFIGURACIÓN DE TRADUCCIÓN AUTOMÁTICA ---
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                autoDisplay: true
+            }, 'google_translate_element');
+        }
+
+        // --- 2. BASE DE DATOS DE PRODUCTOS (Reemplaza con tus fotos) ---
+        // Aquí simulamos las fotos que me mandaste. 
+        // Para usar tus fotos reales desde tu computadora, pon la foto en la misma carpeta que este archivo y cambia la URL por "foto1.jpg".
+        const productos = [
+            { nombre: "Loción Íntima", url: "https://via.placeholder.com/300x300?text=Foto+Locion" },
+            { nombre: "Cera Capilar Fashion+", url: "https://via.placeholder.com/300x300?text=Foto+Cera" },
+            { nombre: "Set Facial Cutis Renov", url: "https://via.placeholder.com/300x300?text=Foto+Set+Facial" },
+            { nombre: "Jabón Íntimo Borasol", url: "https://via.placeholder.com/300x300?text=Foto+Jabon" },
+            { nombre: "Crema Depilatoria Smooth", url: "https://via.placeholder.com/300x300?text=Foto+Crema" },
+            { nombre: "Vasos Decorados", url: "https://via.placeholder.com/300x300?text=Foto+Vasos" },
+            { nombre: "Cadenita de Stitch", url: "https://via.placeholder.com/300x300?text=Foto+Cadena" }
+        ];
+
+        // --- 3. RENDERIZAR LA GALERÍA ---
+        const galeria = document.getElementById('galeria');
+
+        productos.forEach(producto => {
+            const card = document.createElement('div');
+            card.className = 'producto';
+            card.innerHTML = `
+                <img src="${producto.url}" alt="${producto.nombre}">
+                <h3>${producto.nombre}</h3>
+                <button class="btn-whatsapp" onclick="enviarWhatsApp('${producto.nombre}')">📲 Pedir por WhatsApp</button>
+            `;
+            galeria.appendChild(card);
+        });
+
+        // --- 4. FUNCIÓN PARA ENVIAR A WHATSAPP ---
+        function enviarWhatsApp(nombreProducto) {
+            const numero = "18292658658"; // Puedes cambiarlo al 18496303733 si prefieres
+            const mensaje = `¡Hola Alexa/Fran! Vengo de la página web y me interesa este producto: ${nombreProducto}`;
+            const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
